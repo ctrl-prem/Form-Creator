@@ -21,7 +21,7 @@ export default function CreateForm() {
     }
 
     try {
-      const res = await axios.post('http://localhost:3000/api/forms', data);
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/forms`, data);
       const formId = res.data.formId;
       setLink(`${window.location.origin}/form/${formId}`);
     } catch (error) {

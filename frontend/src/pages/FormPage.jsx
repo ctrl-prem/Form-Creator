@@ -11,7 +11,7 @@ export default function FormPage() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/api/forms/${formId}`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/api/forms/${formId}`)
       .then(res => {
         setForm(res.data);
         setStatus('ready');
@@ -24,7 +24,7 @@ export default function FormPage() {
 
   const handleSubmit = async () => {
     try {
-      const res = await axios.post(`http://localhost:3000/api/forms/${formId}/submissions`, input);
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/forms/${formId}/submissions`, input);
       if (res.status === 200) {
         setStatus('submitted');
       }
