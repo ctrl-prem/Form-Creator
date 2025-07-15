@@ -81,7 +81,7 @@ export default function FormPage() {
 
         <button
           onClick={handleSubmit}
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg mt-6 transition duration-300"
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg mt-6 transition duration-300 cursor-pointer"
         >
           Submit
         </button>
